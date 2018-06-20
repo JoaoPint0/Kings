@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.groktor.kings.ui.home.HomeFragment"
+        android:label="home_fragment"
+        tools:layout="@layout/home_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.groktor.kings.ui.login.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/login_fragment"/>
+
+    <fragment
+        android:id="@+id/friendsFragment"
+        android:name="com.groktor.kings.ui.friends.FriendsFragment"
+        android:label="friends_fragment"
+        tools:layout="@layout/friends_fragment"/>
+
+    <fragment
+        android:id="@+id/gamesFragment"
+        android:name="com.groktor.kings.ui.games.list.GamesFragment"
+        android:label="games_fragment"
+        tools:layout="@layout/games_fragment">
+
+        <action
+            android:id="@+id/new_game_action"
+            app:destination="@+id/createGameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+        <action
+            android:id="@+id/view_game_action"
+            app:destination="@+id/gameDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameDetailsFragment"
+        android:name="com.groktor.kings.ui.games.details.GameDetailsFragment"
+        android:label="game_details_fragment"
+        tools:layout="@layout/game_details_fragment" >
+        <argument
+            android:name="gameId"
+            android:defaultValue="myGame" />
+        <deepLink app:uri="www.example.com/{gameId}"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/createGameFragment"
+        android:name="com.groktor.kings.ui.games.create.CreateGameFragment"
+        android:label="create_game_fragment"
+        tools:layout="@layout/create_game_fragment">
+
+        <action
+            android:id="@+id/view_game_action"
+            app:destination="@+id/gameDetailsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+</navigation>
