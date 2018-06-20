@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "402994344656",
+    "firebase_url": "https://kings-c75e4.firebaseio.com",
+    "project_id": "kings-c75e4",
+    "storage_bucket": "kings-c75e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:402994344656:android:736458c207548edb",
+        "android_client_info": {
+          "package_name": "com.groktor.kings"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "402994344656-f1i7aihntvg1efriiq68ejg52365bm75.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "402994344656-f1i7aihntvg1efriiq68ejg52365bm75.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYe6pKvP3X9HbY_4JgUvpoplq6OapB8Io"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

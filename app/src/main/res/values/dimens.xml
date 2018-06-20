@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+
+    <dimen name="onboard_dot_size">8dp</dimen>
+    <dimen name="onboard_dot_margin">8dp</dimen>
+    <dimen name="onboard_dot_radius">100dp</dimen>
+    <dimen name="Onboarding_img">192dp</dimen>
+
+    <dimen name="nav_host_reveal_height">120dp</dimen>
+
+    <dimen name="row_item_margin_vertical">12dp</dimen>
+    <dimen name="row_item_margin_horizontal">12dp</dimen>
+
+    <dimen name="event_card_size">160dp</dimen>
+    <dimen name="event_img_size">120dp</dimen>
+    <dimen name="avatar_img_size">120dp</dimen>
+    <dimen name="award_img_size">48dp</dimen>
+
+</resources>

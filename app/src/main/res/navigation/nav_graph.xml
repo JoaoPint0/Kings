@@ -9,41 +9,51 @@
         android:name="com.groktor.kings.ui.home.HomeFragment"
         android:label="home_fragment"
         tools:layout="@layout/home_fragment">
-    </fragment>
 
-    <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.groktor.kings.ui.login.LoginFragment"
-        android:label="login_fragment"
-        tools:layout="@layout/login_fragment"/>
+        <action
+            android:id="@+id/intro_slides_action"
+            app:destination="@+id/introSlidesFragment" />
 
-    <fragment
-        android:id="@+id/friendsFragment"
-        android:name="com.groktor.kings.ui.friends.FriendsFragment"
-        android:label="friends_fragment"
-        tools:layout="@layout/friends_fragment"/>
-
-    <fragment
-        android:id="@+id/gamesFragment"
-        android:name="com.groktor.kings.ui.games.list.GamesFragment"
-        android:label="games_fragment"
-        tools:layout="@layout/games_fragment">
+        <action
+            android:id="@+id/profile_action"
+            app:destination="@+id/profileFragment" />
 
         <action
             android:id="@+id/new_game_action"
-            app:destination="@+id/createGameFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:destination="@+id/createGameFragment" />
 
         <action
             android:id="@+id/view_game_action"
-            app:destination="@+id/gameDetailsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:destination="@+id/gameDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.groktor.kings.ui.profile.UserProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/user_profile_fragment">
+    </fragment>
+
+    <fragment
+        android:id="@+id/introSlidesFragment"
+        android:name="com.groktor.kings.ui.intro.IntroSlidesFragment"
+        android:label="intro_fragment"
+        tools:layout="@layout/intro_slides_fragment">
+
+        <action
+            android:id="@+id/pick_user_name_action"
+            app:popUpTo="@id/userNameFragment"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/userNameFragment"
+        android:name="com.groktor.kings.ui.intro.UserNameFragment"
+        android:label="user_name_fragment"
+        tools:layout="@layout/user_name_fragment">
+
+        <action
+            android:id="@+id/exit_intro_action"
+            app:popUpTo="@id/homeFragment"/>
     </fragment>
 
     <fragment
@@ -51,6 +61,12 @@
         android:name="com.groktor.kings.ui.games.details.GameDetailsFragment"
         android:label="game_details_fragment"
         tools:layout="@layout/game_details_fragment" >
+
+        <action
+            android:id="@+id/profile_action"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/homeFragment"/>
+
         <argument
             android:name="gameId"
             android:defaultValue="myGame" />
@@ -61,15 +77,16 @@
         android:id="@+id/createGameFragment"
         android:name="com.groktor.kings.ui.games.create.CreateGameFragment"
         android:label="create_game_fragment"
-        tools:layout="@layout/create_game_fragment">
+        tools:layout="@layout/game_creation_fragment">
+
+        <action
+            android:id="@+id/profile_action"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/homeFragment"/>
 
         <action
             android:id="@+id/view_game_action"
-            app:destination="@+id/gameDetailsFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
-            app:popEnterAnim="@anim/slide_in_left"
-            app:popExitAnim="@anim/slide_out_right"/>
+            app:destination="@+id/gameDetailsFragment" />
     </fragment>
 
 </navigation>

@@ -1,3 +1,48 @@
 <resources>
     <string name="app_name">Kings</string>
+
+    <!-- CONSTANTS -->
+    <string name="shared_preferences">sharedPreferences</string>
+    <string name="intro_slides">introSlides</string>
+    <string name="username">username</string>
+
+    <!-- OnBoard Screen. -->
+    <string name="onboarding_skip">Skip</string>
+    <string name="onboarding_finish">Finish</string>
+
+    <!-- Kings backdrop menu labels -->
+    <string name="kings_dashboard_label">Dashboard</string>
+    <string name="kings_profile_label">My Profile</string>
+    <string name="kings_search_label">Search Globe</string>
+    <string name="kings_leaderboard_label">Leaderboard</string>
+    <string name="kings_today_top_label">Today Top Fix</string>
+    <string name="kings_hot_label">Hot Fixtures</string>
+    <string name="kings_wallet_label">Wallet</string>
+    <string name="kings_settings_label">Settings</string>
+
+    <string name="loading">Loading</string>
+    <string name="intro_slides_img"> Intro Image</string>
+    <string name="home_new_event_txt">New events</string>
+    <string name="home_new_event_btn">More</string>
+    <string name="profile_all_awards">All Awards</string>
+
+    <!-- Messages -->
+    <string name="set_permissions_in_settings">Go to Settings -> Apps and Notifications ->
+        Kings -> App Permissions and grant access to Storage.</string>
+
+    <string name="activities_txt">Activities</string>
+    <string name="game_details_tab_activities">Chat</string>
+    <string name="game_details_tab_leaderboard">Scores</string>
+    <string name="game_details_tab_market">Market</string>
+    <string name="game_details_tab_bet">Bets</string>
+
+    <string name="send_button_label">Send</string>
+
+    <string name="choose_an_username">Choose an username</string>
+    <string name="save_username">Save</string>
+    <string name="text_error_blank">Username cannot be blank</string>
+    <string name="text_error_less">Username must have at least 4 characters</string>
+    <string name="leaderboard_txt">LeaderBoard</string>
+
+
 </resources>

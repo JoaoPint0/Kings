@@ -1,6 +1,6 @@
 package com.groktor.kings.ui.friends
 
-import android.arch.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModel
 
 class FriendsViewModel : ViewModel() {
     // TODO: Implement the ViewModel

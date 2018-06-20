@@ -1,13 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.intro.IntroSlidesFragment">
 
-    <TextView
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Hello" />
+        android:paddingBottom="?attr/actionBarSize" />
 
-</FrameLayout>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        android:background="@color/black"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin">
+
+        <ImageButton
+            android:id="@+id/intro_btn_previous"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:contentDescription="@string/intro_slides_img"
+            android:visibility="gone"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:src="@drawable/ic_chevron_left"
+            android:tint="@android:color/white" />
+
+        <Button
+            android:id="@+id/intro_btn_skip"
+            style="@style/Widget.Kings.BlackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center"
+            android:text="@string/onboarding_skip" />
+
+        <LinearLayout
+            android:id="@+id/intro_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/intro_indicator_0"
+                android:layout_width="@dimen/onboard_dot_size"
+                android:layout_height="@dimen/onboard_dot_size"
+                android:layout_marginEnd="@dimen/onboard_dot_margin"
+                android:layout_marginStart="@dimen/onboard_dot_margin"
+                android:contentDescription="@string/intro_slides_img"
+                android:background="@drawable/indicator_selected" />
+
+            <ImageView
+                android:id="@+id/intro_indicator_1"
+                android:layout_width="@dimen/onboard_dot_size"
+                android:layout_height="@dimen/onboard_dot_size"
+                android:layout_marginEnd="@dimen/onboard_dot_margin"
+                android:layout_marginStart="@dimen/onboard_dot_margin"
+                android:contentDescription="@string/intro_slides_img"
+                android:background="@drawable/indicator_unselected" />
+
+            <ImageView
+                android:id="@+id/intro_indicator_2"
+                android:layout_width="@dimen/onboard_dot_size"
+                android:layout_height="@dimen/onboard_dot_size"
+                android:layout_marginEnd="@dimen/onboard_dot_margin"
+                android:layout_marginStart="@dimen/onboard_dot_margin"
+                android:contentDescription="@string/intro_slides_img"
+                android:background="@drawable/indicator_unselected" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/intro_btn_finish"
+            style="@style/Widget.Kings.BlackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:text="@string/onboarding_finish"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/intro_btn_next"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|center"
+            android:padding="@dimen/activity_horizontal_margin"
+            android:contentDescription="@string/intro_slides_img"
+            android:src="@drawable/ic_chevron_right"/>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
